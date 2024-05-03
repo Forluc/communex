@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Historical Data</title>
+</head>
+<body>
+    <h2>История мониторинга CPU и RAM:</h2>
+    <ul>
+        {% for index in range(0, timestamps|length) %}
+            <li>{{ timestamps[index] }} - CPU: {{ cpu_percentages[index] }}%, RAM: {{ ram_percentages[index] }}%</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
